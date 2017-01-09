@@ -19,7 +19,7 @@ def callback( request ):
     return HttpResponse()
 
 def auth( request ):
-    if 'code' not in request:
+    if 'code' not in request.GET:
         return HttpResponse('')
     code = request.GET['code']
     print code
