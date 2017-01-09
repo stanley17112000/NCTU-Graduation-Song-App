@@ -9,10 +9,10 @@ import hashlib
 
 def index( request ):
     if request.session.get('code', False):
-        return render_to_response('index.html', {'Info': 'Logout', 'login_logout':'logout()'})
+        return render_to_response('index.html', {'Info': 'Logout', 'login_logout':'logout()', 'LoginMessage': 'Hello, ' + request.session.get('code')})
 
     else:
-        return render_to_response('index.html', {'Info': 'Login', 'login_logout':'login()'})
+        return render_to_response('index.html', {'Info': 'Login', 'login_logout':'login()', 'LoginMessage': '您尚未登入'})
 
 def callback( request ):
 
