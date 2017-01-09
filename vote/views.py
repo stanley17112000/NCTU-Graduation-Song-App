@@ -17,7 +17,7 @@ def index( request ):
 
 def auth( request ):
     code = request.GET['code']
-
+    print code
     response = requests.post( 'https://id.nctu.edu.tw/o/token/', data={
         'grant_type': 'authorization_code',
         'client_id' : 's2DJWGhPyOknIMHwdJRrgSzwpNjZ7OaoNt56z5tW',
@@ -25,7 +25,7 @@ def auth( request ):
         'client_secret' : 'hz6MZbYQxaKjxJCKyWhzG9cOih25SZdDvs2YIbcFJBuas8jXRCc9MiyyOXK56Av734aThysyCVifIt2AUTXgshHWDrjU8APD5AnmakdBo7zVNerUY3yrfZcDXVFwpOUK',
         'redirect_uri' : 'https:localhost:8000'
     })
-    print response
+    print response.text
     responseJson = json.loads( response.text )
     header = {'Authorization': 'Bearer ' + responseJson['access_token']}
     response = requests.get('https://id.nctu.edu.tw/api/profile/', headers = header)
