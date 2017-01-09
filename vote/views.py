@@ -26,7 +26,7 @@ def auth( request ):
         'client_id' : 's2DJWGhPyOknIMHwdJRrgSzwpNjZ7OaoNt56z5tW',
         'code' : code,
         'client_secret' : 'hz6MZbYQxaKjxJCKyWhzG9cOih25SZdDvs2YIbcFJBuas8jXRCc9MiyyOXK56Av734aThysyCVifIt2AUTXgshHWDrjU8APD5AnmakdBo7zVNerUY3yrfZcDXVFwpOUK',
-        'redirect_uri' : 'https://www.google.com'
+        'redirect_uri' : 'https://localhost:3000'
     })
     print response.text
     responseJson = json.loads( response.text )
