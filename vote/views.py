@@ -25,6 +25,7 @@ def auth( request ):
         'client_secret' : 'hz6MZbYQxaKjxJCKyWhzG9cOih25SZdDvs2YIbcFJBuas8jXRCc9MiyyOXK56Av734aThysyCVifIt2AUTXgshHWDrjU8APD5AnmakdBo7zVNerUY3yrfZcDXVFwpOUK',
         'redirect_uri' : 'https:localhost:8000'
     })
+    print response
     responseJson = json.loads( response.text )
     header = {'Authorization': 'Bearer ' + responseJson['access_token']}
     response = requests.get('https://id.nctu.edu.tw/api/profile/', headers = header)
