@@ -35,7 +35,7 @@ def auth( request ):
 @csrf_exempt
 def vote( request ):
 
-    if request.session['code']:
+    if 'code' in request.session:
         sha1 = hashlib.sha1( request.session['code'] + 'stanley' + request.POST['voteFor'] )
 
         return render_to_response( 'vote.html', {'id':request.session['code'], 'voteFor' :request.POST['voteFor'] , 'validateHash': sha1.hexdigest()} )
