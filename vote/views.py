@@ -19,6 +19,8 @@ def callback( request ):
     return HttpResponse()
 
 def auth( request ):
+    if 'code' not in request:
+        return HttpResponse('')
     code = request.GET['code']
     print code
     response = requests.post( 'https://id.nctu.edu.tw/o/token/', data={
@@ -26,7 +28,7 @@ def auth( request ):
         'client_id' : 's2DJWGhPyOknIMHwdJRrgSzwpNjZ7OaoNt56z5tW',
         'code' : code,
         'client_secret' : 'hz6MZbYQxaKjxJCKyWhzG9cOih25SZdDvs2YIbcFJBuas8jXRCc9MiyyOXK56Av734aThysyCVifIt2AUTXgshHWDrjU8APD5AnmakdBo7zVNerUY3yrfZcDXVFwpOUK',
-        'redirect_uri' : 'https://localhost:3000'
+        'redirect_uri' : 'https://nctu106song.herokuapp.com/auth'
     })
     print response.text
     responseJson = json.loads( response.text )
