@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from vote.views import index, auth, logout, vote
+from vote.views import index, auth, logout, vote, callback
 urlpatterns = [
     url(r'^$', index),
     url(r'^index/$', index),
     url(r'^auth/$', auth),
     url(r'^vote/$' , vote),
+    url(r'^callback/$', callback),
     url(r'^logout/$', logout)
 ]

@@ -14,6 +14,9 @@ def index( request ):
     else:
         return render_to_response('index.html', {'Info': 'Login', 'login_logout':'login()'})
 
+def callback( request ):
+
+    return HttpResponse()
 
 def auth( request ):
     code = request.GET['code']
@@ -23,7 +26,7 @@ def auth( request ):
         'client_id' : 's2DJWGhPyOknIMHwdJRrgSzwpNjZ7OaoNt56z5tW',
         'code' : code,
         'client_secret' : 'hz6MZbYQxaKjxJCKyWhzG9cOih25SZdDvs2YIbcFJBuas8jXRCc9MiyyOXK56Av734aThysyCVifIt2AUTXgshHWDrjU8APD5AnmakdBo7zVNerUY3yrfZcDXVFwpOUK',
-        'redirect_uri' : 'https://nctu106song.herokuapp.com/'
+        'redirect_uri' : 'https://nctu106song.herokuapp.com/callback'
     })
     print response.text
     responseJson = json.loads( response.text )
