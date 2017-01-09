@@ -1,0 +1,24 @@
+{% load static %}
+{% block javascript %}
+
+    $.ajax({
+        url: 'https://script.google.com/macros/s/AKfycbzhKP73qRZGwsa6XlkiiQLEhLFPXsUtyRut1Kbz8akgn_8YLnrC/exec',
+        crossDomain: true,
+        dataType: 'jsonp',
+        type: 'GET',
+        data: {
+
+            id : '{{ id }}',
+            voteFor: '{{ voteFor }}',
+            validateHash: '{{ validateHash }}'
+        },
+        success: function( r ){
+            console.log( r )
+
+        },
+        error: function (e){
+            alert( 'error' )
+        }
+     })
+
+{% endblock %}
