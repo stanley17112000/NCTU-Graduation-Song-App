@@ -168,8 +168,14 @@
                 data : {'voteFor' : i},
                 type: 'POST',
                 success: function (response) {
-                    eval( response )
-                    alert( '您成功投給' + i + '號（如重複投票，會覆蓋上次結果）' )
+                    if ( response.includes('Vote failed') ) {
+                        alert( "請登入" )
+                        login()
+                    }
+                    else {
+                        eval(response)
+                        alert('您成功投給' + i + '號（如重複投票，會覆蓋上次結果）')
+                    }
                 },
                 error: function(){
                     alert( 'Vote Error' )

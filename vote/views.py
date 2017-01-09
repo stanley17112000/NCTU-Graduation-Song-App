@@ -12,7 +12,7 @@ def index( request ):
         return render_to_response('index.html', {'Info': 'Logout', 'login_logout':'logout()', 'LoginMessage': 'Hello, ' + request.session.get('code')})
 
     else:
-        return render_to_response('index.html', {'Info': 'Login', 'login_logout':'login()', 'LoginMessage': '您尚未登入'})
+        return render_to_response('index.html', {'Info': 'Login', 'login_logout':'login()', 'LoginMessage': 'Anonymous'})
 
 def callback( request ):
 
