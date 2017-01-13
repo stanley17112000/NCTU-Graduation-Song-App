@@ -71,44 +71,265 @@
                 <h1 class="page-header">交大 106 級畢業歌票選</h1>
             </div>
 
-            <span id="mainContent"></span>
-        
-       		<script type="text/javascript">
-       			var htmlStr = ""
-       			for ( var i = 0 ; i < 10 ; i++ ){
-       				waveFormId = 'waveform_' + i
-       				musicMakerId = 'music_maker_' + i
-       				musicNameId = 'music_name_' + i
-       				htmlStr += 
-		            '<div class="col-lg-3 col-md-4 col-xs-6 thumb">\
-		                <a class="thumbnail" style="text-decoration: none;" >\
-		                	<div id="'+waveFormId+'"></div>\
-							<div style="text-align: center; padding-bottom: 10px">\
-								<img src="{% static "vote/img/play.png" %}" onclick="playAudio('+i+')">\
-							</div>\
-							<div>\
-								<div id="'+musicMakerId+'" style="text-align:center;font-size:10px">\
-									作曲者 ： 洪祺堡\
-								</div>\
-								<div id="'+musicNameId+'" style="text-align:center;font-size:10px">\
-									歌名 ： 畢業歌\
-								</div>\
-							</div>\
-							<div class="vote_btn">\
-								<img onclick="voteFor('+i+')" src="{% static "vote/img/vote.png" %}">\
-							</div>	\
-		    			 </a>\
-		            </div>\
-		            ';
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" style="text-decoration: none;" >
+                            <div id="waveform_1"></div>
+                            <div style="text-align: center; padding-bottom: 10px">
+                                <img src="{% static "vote/img/play.png" %}" onclick="playAudio(0)">
+                            </div>
+                            
+                                <div id="music_content_1" style="text-align:left; padding-left:10px; padding-right:10px; font-size:10px">
+                                    
+                          
+                                <h3>1. 絮語四年</h3>
+                                詞：傳科06曾煥富<br>
+                                曲：人社07段定語、傳科06曾煥富<br>
+                                作品說明：對於交大，我們有很多不捨與感謝，這首歌希望能讓106級的大家在聽歌的同時，想起那些美麗的回憶。我們期待這份在交大獨特的軌跡，藉由歌聲與饒舌緩緩說出。我們寫的不只是歌，還是一個，只屬於交通大學的故事。 <br><br>
+                                <h4>歌詞：</h4>
+                                <br>
+                                走了<br>
+                                變了散了<br>
+                                二餐十舍<br>
+                                終究都是過客<br>
+                                時間在催呢<br>
+                                大四然後呢<br>
+                                我們終於懂了失去也是一種獲得<br>
+                                抬頭再看一次一致的天空&#160;<br>
+                                藍白中填空<br>
+                                填瘋狂自由填夢<br>
+                                我們曾不思索<br>
+                                卻不忘記嘶吼那些傳奇不是聽說而是來自一零六<br>
+                                &#160;<br>
+                                北大門的路上<br>
+                                總是隨便亂晃<br>
+                                手機滑著滑著走到C棚不用多想<br>
+                                想起高中多想<br>
+                                踏進這個地方<br>
+                                還在交通大學門口<br>
+                                合照一張<br>
+                                我們將這照片細心處理放進備審<br>
+                                被審的時候<br>
+                                說有來過<br>
+                                背著劇本<br>
+                                直到第二階段揭曉<br>
+                                指考志願繳交<br>
+                                九月一號<br>
+                                我們相聚在學校<br>
+                                &#160;<br>
+                                多希望還能有四年<br>
+                                (能不能再比四年多一點)<br>
+                                讓這次聊天久一點<br>
+                                (腦中浮現或許懷念住在一起的每天)<br>
+                                會浮現<br>
+                                會懷念&#160;<br>
+                                打鬧的每一天&#160;<br>
+                                泛黃中微笑的臉<br>
+                                再久都是那麼甜<br>
+                                ho~~~~~~~~&#160;<br>
+                                梅竹勝利的畫面<br>
+                                像跑馬燈般上演<br>
+                                (清大交大為了梅竹<br>
+                                放下成見&#160;<br>
+                                不會是句點明年<br>
+                                更好的呈現)<br>
+                                ho~~~~~~~~&#160;<br>
+                                操場衝刺的瞬間<br>
+                                怎麼就這樣再也不見<br>
+                                (相框框不住<br>
+                                我們瘋狂<br>
+                                的從前<br>
+                                心是年輕的&#160;<br>
+                                就算已經老了容顏)<br>
+                                &#160;<br>
+                                怎麼會失落<br>
+                                怎麼會寂寞<br>
+                                怎麼會有些話想說卻說不出口 <br>
+                                怎麼會不懂<br>
+                                怎麼會顫抖<br>
+                                怎麼會突然想起你罵我是豬頭<br>
+                                我們總是為了<br>
+                                現實而成長&#160;<br>
+                                卻在緊要關頭<br>
+                                張不開翅膀<br>
+                                無能為力的我待在夢想劇場<br>
+                                觀眾都沒了我還是會繼續唱<br>
+                                &#160;<br>
+                                走了 <br>
+                                誰會想起呢<br>
+                                還沒結束我想我會撐著<br>
+                                記得在操場對流星許的願是真的<br>
+                                &#160;<br>
+                                還記得<br>
+                                校運會<br>
+                                的創意繞場 <br>
+                                奈米屌<br>
+                                傳奇加油聲<br>
+                                餘音繞樑<br>
+                                談到涼&#160;<br>
+                                想起當代的王從樹<br>
+                                翹掉整個學期成績有八五<br>
+                                唸書<br>
+                                或報告老師喜歡分小組<br>
+                                偏偏沒有熟人又是尷尬的翹楚<br>
+                                直到老師說誰落單&#160;<br>
+                                我舉手<br>
+                                希望快下課到二餐<br>
+                                同學<br>
+                                來吃飯摟<br>
+                                多希望還能有四年<br>
+                                (能不能再比四年再多一點) <br>
+                                讓這次聊天久一點<br>
+                                (腦中浮現或是懷念住在一起的每天)<br>
+                                會浮現<br>
+                                會懷念&#160;<br>
+                                打鬧的每一天&#160;<br>
+                                泛黃中微笑的臉<br>
+                                再久都是那麼甜<br>
+                                ho~~~~~~~~&#160;<br>
+                                梅竹勝利的畫面<br>
+                                像跑馬燈般上演<br>
+                                (清大交大為了梅竹放下成見&#160;<br>
+                                不會是句點明年<br>
+                                更好的呈現)<br>
+                                ho<br>
+                                ~~~~~~~~&#160;<br>
+                                操場衝刺的瞬間<br>
+                                怎麼就這樣再也不見<br>
+                                (相框框不住我們<br>
+                                瘋狂的從前<br>
+                                心是年輕的&#160;<br>
+                                就算已經老了容顏)<br>
+                                 <br>
+                                謝謝你一直在我身旁&#160; <br>
+                                (身旁是<br>
+                                最親最好的人<br>
+                                站的地方&#160;<br>
+                                就算失敗了我還能有<br>
+                                我的倔強)<br>
+                                (闖過好的壞的你總放在心上<br>
+                                欣賞著努力<br>
+                                過後<br>
+                                操場的夕陽)<br>
+                                謝謝你總願意陪我去闖&#160;<br>
+                                (你從沒想過&#160;<br>
+                                有一天會離開她<br>
+                                老師從沒講過<br>
+                                有一天會離開家)<br>
+                                (總說讓他去吧&#160;<br>
+                                回憶會長大<br>
+                                你說沒關係啦當作交大的<br>
+                                最後一次長假)<br>
+                                謝謝你一直在我身旁<br>
+                                謝謝你總願意陪我去闖<br>
+                                
+                        
+                            </div>
+                            <div class="vote_btn">
+                                <img onclick="voteFor(1)" src="{% static "vote/img/vote.png" %}">
+                            </div>  
+                         </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" style="text-decoration: none;" >
+                            <div id="waveform_2"></div>
+                            <div style="text-align: center; padding-bottom: 10px">
+                                <img src="{% static "vote/img/play.png" %}" onclick="playAudio(1)">
+                            </div>
+                            
+                                <div id="music_content_2" style="text-align:left; padding-left:10px; padding-right:10px; font-size:10px">
+                                    
+                                    <h3>2. The Way Back Home </h3><br>
+                                    詞/曲：詹禮豪 黃馨平 宋世穎<br>
+                                    編曲：詹禮豪 王昌聞 宋世穎 許修瑋<br>
+                                    錄音/混音：宋世穎<br>
+                                    <br>
+                                    <h4>歌詞：</h4><br>
+                                    想回到那年 青澀害羞的時光 <br>
+                                    小木屋前 吉他和你輕聲唱 <br>
+                                    鏡頭下你說著日常 說沒有我會不一樣 <br>
+                                    回憶幸福時光 <br>
+                                    <br>
+                                    時間匆匆走 那些刻骨銘心難回頭 <br>
+                                    我 還能做些什麼 <br>
+                                    Can I stay tough and never lose control <br>
+                                    Can I find the way back home <br>
+                                    夢想路上有你有我別蹉跎 <br>
+                                    面對現實不被左右 <br>
+                                    我狂 我瘋 再大風雨也抬頭挺胸 <br>
+                                    勇敢 不害怕向前走 <br>
+                                    <br>
+                                    畢業的那天 我們依舊是迷惘 <br>
+                                    中正堂前 我們不捨相對望 <br>
+                                    回想著當初的夢想 從來都沒有被遺忘 <br>
+                                    起身繼續飛翔 <br>
+                                    <br>
+                                    Can I stay tough and never lose control <br>
+                                    Can I find the way back home <br>
+                                    夢想路上有你有我別蹉跎 <br>
+                                    面對現實不被左右 <br>
+                                    我狂 我瘋 再大風雨也抬頭挺胸 <br>
+                                    勇敢 不害怕向前走 <br>
+                                    <br>
+                                    Can I stay tough and never lose control <br>
+                                    Can I find the way back home <br>
+                                    我們在這世界不停地摸索 <br>
+                                    相信最後終有結果 <br>
+                                    我闖 我鬥 出交大也能高人一籌 <br>
+                                    最後 謝謝有你和我<br>
+                                    <br>
 
-		           
+                                
+                        
+                            </div>
+                            <div class="vote_btn">
+                                <img onclick="voteFor(2)" src="{% static "vote/img/vote.png" %}">
+                            </div>  
+                         </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" style="text-decoration: none;" >
+                            <div id="waveform_3"></div>
+                            <div style="text-align: center; padding-bottom: 10px">
+                                <img src="{% static "vote/img/play.png" %}" onclick="playAudio(2)">
+                            </div>
+                            
+                                <div id="music_content_3" style="text-align:left; padding-left:10px; padding-right:10px; font-size:10px">
+                                    
+                                    <h3>3. 畢業歌</h3><br>
+                                    詞/曲：梁展能<br><br>
 
-       			}
-	   			var toAppend = document.getElementById( 'mainContent' )
-		            toAppend.innerHTML +=  htmlStr 
-       		</script>    
-       
+                                    <h4>歌詞：</h4><br>
+                                    <br>
+                                    VERSE:<br>
+                                    該要如何談往事風月年華<br>
+                                    卻畢竟惦掛着他 該如何淡去牽掛<br>
+                                    作業如風沙練習寫詩如畫<br>
+                                    你尋找到解答 你了解嗎<br>
+                                     <br>
+                                    座落某處那餐廳還是沒人<br>
+                                    而我們聰明不笨 走進大學的大門<br>
+                                    每天用功去讀書為求學問<br>
+                                    也沒想過學習是只求高分<br>
+                                     <br>
+                                    CHORUS:<br>
+                                    無數的快樂回憶壓力該怎麼去訴說<br>
+                                    限期快到我卻忘記上傳該要怎麼做<br>
+                                    感受 到多元觀念豐富了生活<br>
+                                    想想其實也是不錯 那就等待法律通過 <br>
+                                    我想我其實還記得離家那天去生活<br>
+                                    是不是那花火還是繼續燃燒不沉默<br>
+                                    展開 新的旅程和追隨的結果<br>
+                                    能否題目不用再錯 報告不能一拖再拖~囉<br>
 
+
+                                
+                        
+                            </div>
+                            <div class="vote_btn">
+                                <img onclick="voteFor(3)" src="{% static "vote/img/vote.png" %}">
+                            </div>  
+                         </a>
+                    </div>
 
         </div>
 
@@ -136,16 +357,19 @@
 
     <script type="text/javascript">
     	var wavesurfer = [ ]
-    	for ( var i = 0 ; i < 10 ; i++ ){
+    	for ( var i = 0 ; i < 3 ; i++ ){
     		
 	    	audio = WaveSurfer.create({
-			  container: '#waveform_' + i,
+			  container: '#waveform_' + (i+1)    ,
 			  waveColor: 'black',
 			  progressColor: 'blue'
 			});
-
-			audio.load('https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3');
-
+            if ( i == 0 )
+			    audio.load('{% static "vote/songs/song1.wav" %}');
+            else if ( i == 1 )
+                audio.load('{% static "vote/songs/song2.wav" %}');
+            else
+                audio.load('{% static "vote/songs/song3.mp3" %}');
 			wavesurfer.push( audio )
 		}
 
@@ -154,7 +378,7 @@
                 wavesurfer[i].pause()
             else
                 wavesurfer[i].play()
-			for ( var j = 0 ; j < 10 ; j++ )
+			for ( var j = 0 ; j < 3 ; j++ )
 			    if ( i != j ){
                     if ( wavesurfer[j].isPlaying() )
                         wavesurfer[j].pause()
