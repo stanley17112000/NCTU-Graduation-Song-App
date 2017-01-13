@@ -73,10 +73,8 @@
 
                     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                         <a class="thumbnail" style="text-decoration: none;" >
-                            <div id="waveform_1"></div>
-                            <div style="text-align: center; padding-bottom: 10px">
-                                <img src="{% static "vote/img/play.png" %}" onclick="playAudio(0)">
-                            </div>
+                           <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/user-332475424/song1&amp;auto_play=false&amp;show_artwork=true&amp;color=0066cc"></iframe>
+                  
                             
                                 <div id="music_content_1" style="text-align:left; padding-left:10px; padding-right:10px; font-size:10px">
                                     
@@ -231,7 +229,7 @@
                     </div>
                     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                         <a class="thumbnail" style="text-decoration: none;" >
-                            <div id="waveform_2"></div>
+                            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/user-332475424/2-the-way-back-home&amp;auto_play=false&amp;show_artwork=true&amp;color=0066cc"></iframe>
                             <div style="text-align: center; padding-bottom: 10px">
                                 <img src="{% static "vote/img/play.png" %}" onclick="playAudio(1)">
                             </div>
@@ -288,10 +286,7 @@
                     </div>
                     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                         <a class="thumbnail" style="text-decoration: none;" >
-                            <div id="waveform_3"></div>
-                            <div style="text-align: center; padding-bottom: 10px">
-                                <img src="{% static "vote/img/play.png" %}" onclick="playAudio(2)">
-                            </div>
+                             <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/user-332475424/song3&amp;auto_play=false&amp;show_artwork=true&amp;show_bpm=false&amp;color=0066cc"></iframe>
                             
                                 <div id="music_content_3" style="text-align:left; padding-left:10px; padding-right:10px; font-size:10px">
                                     
@@ -357,7 +352,7 @@
 
     <script type="text/javascript">
     	var wavesurfer = [ ]
-    	for ( var i = 0 ; i < 3 ; i++ ){
+    	for ( var i = 0 ; i < 0 ; i++ ){
     		
 	    	audio = WaveSurfer.create({
 			  container: '#waveform_' + (i+1)    ,
@@ -365,7 +360,7 @@
 			  progressColor: 'blue'
 			});
             if ( i == 0 )
-			    audio.load('{% static "vote/songs/song1.wav" %}');
+			    audio.load('https://soundcloud.com/user-332475424/song3');
             else if ( i == 1 )
                 audio.load('{% static "vote/songs/song2.wav" %}');
             else
