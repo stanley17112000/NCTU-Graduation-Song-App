@@ -475,13 +475,11 @@
        
         
      
-        function initialize()
-        {
-            createBar( 1,1,1)
-            
-        }
+   
 
         function updateBars(){
+             if ( typeof myChart == 'undefined' )
+                createBar(1,1,1)
              $.ajax({
                 url: 'https://script.google.com/macros/s/AKfycbw_B3ytW1pRmFG0cVtsp-2r0_N6w2v5J0KIdK_0tY-g82DhHIrx/exec',
                 crossDomain: true,
