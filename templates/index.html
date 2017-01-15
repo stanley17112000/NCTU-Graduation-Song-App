@@ -43,13 +43,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">{{ LoginMessage }}</a>
+                <a class="navbar-brand" href="#" href="#">{{ LoginMessage }}</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a href="#result">Result</a>
                     </li>
                     <li>
                         <a href="#" onclick="{{ login_logout }}">{{ Info }}</a>
@@ -71,6 +71,12 @@
                 <h1 class="page-header">交大 106 級畢業歌票選</h1>
             </div>
 
+            <div id="result">
+                <canvas id="barContainer"></canvas>
+        
+            </div>  
+
+            <div id="mainContent">
                     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                         <a class="thumbnail" style="text-decoration: none;" >
                            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https://soundcloud.com/user-332475424/song1&amp;auto_play=false&amp;show_artwork=true&amp;color=0066cc"></iframe>
@@ -327,6 +333,7 @@
                             </div>  
                          </a>
                     </div>
+            </div>
 
         </div>
 
@@ -346,6 +353,9 @@
 
     <!-- jQuery -->
     <script src="{%  static "vote/js/jquery.js" %}"></script>
+
+    <script src="{%  static "vote/js/Chart.min.js" %}"></script>
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="{% static "vote/js/bootstrap.min.js" %}"></script>
@@ -423,6 +433,97 @@
 
             })
         }
+        
+            
+        function createBar( one , two , three ){
+            var ctx = $('#barContainer')
+            myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ["1.絮語四年", "2. The Way Back Home", "3. 畢業歌"],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [0,0,0],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)'
+                           
+                        ],
+                        borderColor: [
+                            'rgba(255,99,132,1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero:true
+                            }
+                        }]
+                    }
+                }
+            });
+
+
+        }
+        
+       
+        
+     
+        function initialize()
+        {
+            createBar( 1,1,1)
+            
+        }
+
+        function updateBars(){
+             $.ajax({
+                url: 'https://script.google.com/macros/s/AKfycbw_B3ytW1pRmFG0cVtsp-2r0_N6w2v5J0KIdK_0tY-g82DhHIrx/exec',
+                crossDomain: true,
+                type: 'GET',
+                data: {},
+                success: function( r ){
+                    
+                    resultJson = JSON.parse( r )
+                    chartdata = [resultJson['one'], resultJson['two'], resultJson['three']]
+                    myChart.data.datasets[0].data[0] = resultJson['one'];
+                    myChart.data.datasets[0].data[1] = resultJson['two'];
+                    myChart.data.datasets[0].data[2] = resultJson['three'];
+            
+                    myChart.update()
+                    
+                },
+                error: function (e){
+                    console.log( e )
+                }
+            })
+        }
+
+        function locationHashChanged() {
+            var location = window.location.hash
+          
+            if ( location == '#result' ){
+                    updateBars()
+                    $('#mainContent').hide()
+                    $('#result').show()
+
+            }
+            else{
+                    $('#mainContent').show()
+                    $('#result').hide()
+            }
+        }
+        $(document).ready( function(){
+            initialize()
+            locationHashChanged()
+        } )
+        window.addEventListener("hashchange", locationHashChanged, false);
+      
     </script>
 
 
